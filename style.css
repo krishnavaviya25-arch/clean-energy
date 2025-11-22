@@ -73,11 +73,14 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.service-img, .project-img, .about-img {
+.service-img,.about-img {
     width: 70%;
     border-radius: 10px;
 }
-
+.project-img,{
+     width: 50%;
+    border-radius: 1px; 
+}
 /* Contact Form */
 input, textarea {
     width: 90%;
@@ -94,6 +97,7 @@ footer {
     padding: 10px;
     margin-top: 40px;
 }
+
 
 
 
