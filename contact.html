@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Green Spark</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Green Spark Solution</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Contact Us</h2>
+
+    
+
+    <form id="contactForm">
+
+        <label>Name:</label><br><br>
+        <input type="text" id="name" onfocus="highlight(this)" onblur="removeHighlight(this)"><br><br>
+
+        <label>Email:</label><br><br>
+        <input type="email" id="email" onkeyup="validateEmail()"><br><br>
+
+        <label>Message:</label><br><br>
+        <textarea id="message"></textarea><br><br>
+
+        <p id="error" class="error"></p>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Green Spark Solution</p>
+</footer>
+
+</body>
+</html>
