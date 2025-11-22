@@ -78,7 +78,7 @@ nav a:hover {
     border-radius: 10px;
 }
 .project-img,{
-     width: 50%;
+     width: 10;
     border-radius: 1px; 
 }
 /* Contact Form */
@@ -97,6 +97,7 @@ footer {
     padding: 10px;
     margin-top: 40px;
 }
+
 
 
 
