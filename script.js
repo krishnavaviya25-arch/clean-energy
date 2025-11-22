@@ -1,41 +1,38 @@
-// Highlight input field
 function highlight(field) {
     field.style.border = "2px solid green";
 }
 
-// Remove highlight
 function removeHighlight(field) {
-    field.style.border = "1px solid black";
+    field.style.border = ""; // reset to default
 }
 
-// Email validation (dynamic)
-function validateEmail() {
-    let email = document.getElementById("email").value;
-    if (!email.includes("@")) {
-        document.getElementById("error").innerText = "Invalid Email Format!";
-    } else {
-        document.getElementById("error").innerText = "";
-    }
+// Better email validation
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// Form Submit Handler
+// Form submit handler
 document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent default submission
+
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("message").value.trim();
-    let error = document.getElementById("error");
 
+    // Check for empty fields
     if (!name || !email || !message) {
-        error.textContent = "All fields are required!";
-        event.preventDefault();
+        alert("All fields are required!");
         return;
     }
 
-    if (!email.includes("@")) {
-        error.textContent = "Enter a valid email!";
-        event.preventDefault();
+    // Check for valid email
+    if (!isValidEmail(email)) {
+        alert("Enter a valid email!");
         return;
     }
 
+    // If everything is valid
     alert("Message Sent Successfully!");
+    // Optionally, submit the form here
+    // this.submit(); 
 });
