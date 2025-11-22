@@ -74,8 +74,8 @@ nav a:hover {
 }
 
 .service-img, .project-img, .about-img {
-    width: 20%;
-    border-radius: 10px;
+    width: 10%;
+    border-radius: 1px;
 }
 
 /* Contact Form */
@@ -94,6 +94,7 @@ footer {
     padding: 10px;
     margin-top: 40px;
 }
+
 
 
 
